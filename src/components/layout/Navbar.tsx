@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
 import logo from '../../assets/logo-tucsoft.png';
+import { ThemeToggle } from '../ui/ThemeToggle';
 
 interface NavbarProps {
   onOpenEstimate?: () => void;
@@ -50,14 +51,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimate }) => {
         }`}
       >
         <div className="max-w-[1200px] mx-auto grid grid-cols-[1fr_auto_1fr] gap-4 items-center">
-          <button
-            onClick={() => setMenuOpen(true)}
-            aria-label="Abrir menú"
-            className="group flex flex-col gap-[9px] w-10 sm:w-[50px] py-2"
-          >
-            <span className="block h-[3px] w-full bg-white group-hover:bg-brand transition-colors" />
-            <span className="block h-[3px] w-3/5 bg-white group-hover:bg-brand transition-all group-hover:w-full" />
-          </button>
+          <div className="flex items-center gap-3 sm:gap-6">
+            <button
+              onClick={() => setMenuOpen(true)}
+              aria-label="Abrir menú"
+              className="group flex flex-col gap-[9px] w-10 sm:w-[50px] py-2"
+            >
+              <span className="block h-[3px] w-full bg-white group-hover:bg-brand transition-colors" />
+              <span className="block h-[3px] w-3/5 bg-white group-hover:bg-brand transition-all group-hover:w-full" />
+            </button>
+            <ThemeToggle />
+          </div>
 
           <a href="#" className="justify-self-center hover:opacity-90 transition-opacity">
             <img src={logo} alt="TucSoft" className="h-7 sm:h-10 w-auto" />

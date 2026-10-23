@@ -6,23 +6,25 @@ export default {
   theme: {
     extend: {
       colors: {
+        white: "rgb(var(--fg) / <alpha-value>)",
+        snow: "#FFFFFF",
         ink: {
-          DEFAULT: "#181818",
-          deep: "#101010",
-          card: "#2A2A2A",
+          DEFAULT: "rgb(var(--ink) / <alpha-value>)",
+          deep: "rgb(var(--ink-deep) / <alpha-value>)",
+          card: "rgb(var(--ink-card) / <alpha-value>)",
         },
         brand: {
           DEFAULT: "#EB542F",
           hover: "#F2673F",
         },
-        muted: "#3A3A3A",
+        muted: "rgb(var(--muted) / <alpha-value>)",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
       boxShadow: {
-        card: "0 10px 30px rgba(0, 0, 0, 0.35)",
+        card: "0 10px 30px var(--shadow)",
       },
     },
   },

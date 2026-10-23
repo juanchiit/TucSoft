@@ -11,16 +11,16 @@ const FacebookIcon = () => (
 const InstagramIcon = () => (
   <svg viewBox="0 0 24 24" className="w-6 h-6" aria-hidden>
     <circle cx="12" cy="12" r="10" fill="currentColor" />
-    <rect x="7" y="7" width="10" height="10" rx="3" fill="none" stroke="#101010" strokeWidth="1.6" />
-    <circle cx="12" cy="12" r="2.4" fill="none" stroke="#101010" strokeWidth="1.6" />
-    <circle cx="15" cy="9" r="0.8" fill="#101010" />
+    <rect x="7" y="7" width="10" height="10" rx="3" fill="none" className="stroke-ink-deep" strokeWidth="1.6" />
+    <circle cx="12" cy="12" r="2.4" fill="none" className="stroke-ink-deep" strokeWidth="1.6" />
+    <circle cx="15" cy="9" r="0.8" className="fill-ink-deep" />
   </svg>
 );
 
 const LinkedinIcon = () => (
   <svg viewBox="0 0 24 24" className="w-6 h-6" aria-hidden>
     <circle cx="12" cy="12" r="10" fill="currentColor" />
-    <path d="M8.2 10.2h1.7v5.6H8.2zM9.05 7.6a.95.95 0 1 1 0 1.9.95.95 0 0 1 0-1.9zM11.1 10.2h1.6v.77c.24-.45.82-.9 1.68-.9 1.8 0 2.12 1.18 2.12 2.7v3.03h-1.68v-2.7c0-.64-.01-1.47-.9-1.47-.9 0-1.04.7-1.04 1.42v2.75h-1.68z" fill="#101010" />
+    <path d="M8.2 10.2h1.7v5.6H8.2zM9.05 7.6a.95.95 0 1 1 0 1.9.95.95 0 0 1 0-1.9zM11.1 10.2h1.6v.77c.24-.45.82-.9 1.68-.9 1.8 0 2.12 1.18 2.12 2.7v3.03h-1.68v-2.7c0-.64-.01-1.47-.9-1.47-.9 0-1.04.7-1.04 1.42v2.75h-1.68z" className="fill-ink-deep" />
   </svg>
 );
 
@@ -70,7 +70,7 @@ export const Footer: React.FC = () => {
               />
               <button
                 type="submit"
-                className="bg-brand hover:bg-brand-hover px-3 text-sm font-semibold whitespace-nowrap transition-colors"
+                className="bg-brand hover:bg-brand-hover px-3 text-sm font-semibold text-snow whitespace-nowrap transition-colors"
               >
                 {subscribed ? '¡Suscripto!' : 'Unirme al Newsletter'}
               </button>

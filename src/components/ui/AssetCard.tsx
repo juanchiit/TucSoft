@@ -21,7 +21,7 @@ export const AssetCard: React.FC<AssetCardProps> = ({ asset, showDiagnosis, onDi
   const hasFault = asset.temperature > MAX_SAFE_TEMPERATURE;
 
   return (
-    <article className="flex flex-col rounded-xl border border-white/10 bg-[#0f1729] overflow-hidden">
+    <article className="theme-dark flex flex-col rounded-xl border border-white/10 bg-[#0f1729] overflow-hidden">
       <div
         className={`h-0.5 bg-gradient-to-r ${
           hasFault ? 'from-orange-500 to-red-500' : 'from-blue-500 to-cyan-400'
