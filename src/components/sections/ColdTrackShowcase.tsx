@@ -100,8 +100,8 @@ export const ColdTrackShowcase: React.FC = () => {
           <p className="mt-4 text-sm text-white/60">Objetivos de ColdTrack para su primer año de implementación.</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 items-center">
+          <div className="xl:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-2">
             {features.map(({ icon: Icon, title, description }) => (
               <div key={title} className="p-6 sm:p-8 rounded-lg transition-colors hover:bg-ink-card">
                 <Icon size={32} strokeWidth={1.75} className="text-brand mb-5" />
@@ -111,7 +111,7 @@ export const ColdTrackShowcase: React.FC = () => {
             ))}
           </div>
 
-          <div className="lg:col-span-5">
+          <div className="xl:col-span-5 w-full max-w-xl mx-auto">
             <div className="shadow-card rounded-xl">
               <AssetCard
                 asset={sampleAsset}
@@ -140,9 +140,9 @@ export const ColdTrackShowcase: React.FC = () => {
             {steps.map(({ icon: Icon, title, description }, idx) => (
               <li
                 key={title}
-                className="bg-ink-deep rounded-lg p-6 sm:p-8 flex flex-col sm:flex-row gap-4 sm:gap-8 transition-colors hover:bg-ink-card"
+                className="bg-ink-deep rounded-lg p-6 sm:p-8 flex flex-col xl:flex-row gap-4 xl:gap-8 transition-colors hover:bg-ink-card"
               >
-                <span className="text-5xl sm:text-[80px] font-bold leading-none text-brand/40 shrink-0">
+                <span className="text-5xl xl:text-[80px] font-bold leading-none text-brand/40 shrink-0">
                   {String(idx + 1).padStart(2, '0')}
                 </span>
                 <div>

@@ -4,7 +4,7 @@ import logo from '../../assets/logo-tucsoft.png';
 import { ThemeToggle } from '../ui/ThemeToggle';
 
 interface NavbarProps {
-  onOpenEstimate?: () => void;
+  onOpenDemo?: () => void;
 }
 
 const menuLinks = [
@@ -15,17 +15,17 @@ const menuLinks = [
   { label: 'Clientes', href: '#clients' },
 ];
 
-const EstimateLink: React.FC<{ onClick?: () => void }> = ({ onClick }) => (
+const DemoLink: React.FC<{ onClick?: () => void }> = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="relative pb-2 whitespace-nowrap text-base lg:text-xl font-poppins font-normal text-white hover:text-brand transition-colors"
+    className="relative py-2 whitespace-nowrap text-base lg:text-xl font-poppins font-normal text-white hover:text-brand transition-colors"
   >
-    <span className="hidden sm:inline">Solicitar </span>Presupuesto
+    <span className="hidden sm:inline">Solicitar </span>Demo
     <span className="absolute bottom-0 right-0 h-[2px] w-full sm:w-[62%] bg-current" />
   </button>
 );
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimate }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onOpenDemo }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -55,7 +55,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimate }) => {
             <button
               onClick={() => setMenuOpen(true)}
               aria-label="Abrir menú"
-              className="group flex flex-col gap-[9px] w-10 sm:w-[50px] py-2"
+              className="group flex flex-col justify-center gap-[9px] w-10 sm:w-[50px] h-11"
             >
               <span className="block h-[3px] w-full bg-white group-hover:bg-brand transition-colors" />
               <span className="block h-[3px] w-3/5 bg-white group-hover:bg-brand transition-all group-hover:w-full" />
@@ -63,12 +63,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimate }) => {
             <ThemeToggle />
           </div>
 
-          <a href="#" className="justify-self-center hover:opacity-90 transition-opacity">
+          <a href="#" aria-label="TucSoft, inicio" className="justify-self-center py-2 hover:opacity-90 transition-opacity">
             <img src={logo} alt="TucSoft" className="h-7 sm:h-10 w-auto" />
           </a>
 
           <div className="justify-self-end">
-            <EstimateLink onClick={onOpenEstimate} />
+            <DemoLink onClick={onOpenDemo} />
           </div>
         </div>
       </header>
@@ -85,10 +85,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimate }) => {
             </button>
             <span />
             <div className="justify-self-end">
-              <EstimateLink
+              <DemoLink
                 onClick={() => {
                   setMenuOpen(false);
-                  onOpenEstimate?.();
+                  onOpenDemo?.();
                 }}
               />
             </div>

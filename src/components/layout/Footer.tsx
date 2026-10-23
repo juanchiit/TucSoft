@@ -49,8 +49,8 @@ export const Footer: React.FC = () => {
   return (
     <footer className="font-montserrat text-white">
       <div className="bg-ink-deep px-4 sm:px-10 lg:px-[117px] py-12">
-        <div className="max-w-[1126px] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-[360px_1px_auto_auto_1px_1fr] gap-x-6 gap-y-10 lg:gap-x-10 xl:gap-x-14">
-          <div className="col-span-2 md:col-span-3 lg:col-span-1">
+        <div className="max-w-[1126px] mx-auto grid grid-cols-2 md:grid-cols-3 xl:grid-cols-[360px_1px_auto_auto_1px_1fr] gap-x-6 gap-y-10 xl:gap-x-14">
+          <div className="col-span-2 md:col-span-3 xl:col-span-1">
             <a href="#" className="inline-block">
               <img src={logo} alt="TucSoft" className="h-10 w-auto" />
             </a>
@@ -76,21 +76,21 @@ export const Footer: React.FC = () => {
               </button>
             </form>
 
-            <div className="mt-4 flex items-center gap-4 text-brand">
-              <a href="#" aria-label="Facebook" className="hover:text-brand-hover"><FacebookIcon /></a>
-              <a href="#" aria-label="Instagram" className="hover:text-brand-hover"><InstagramIcon /></a>
-              <a href="#" aria-label="LinkedIn" className="hover:text-brand-hover"><LinkedinIcon /></a>
+            <div className="mt-4 -ml-2 flex items-center gap-1 text-brand">
+              <a href="#" aria-label="Facebook" className="p-2 hover:text-brand-hover"><FacebookIcon /></a>
+              <a href="#" aria-label="Instagram" className="p-2 hover:text-brand-hover"><InstagramIcon /></a>
+              <a href="#" aria-label="LinkedIn" className="p-2 hover:text-brand-hover"><LinkedinIcon /></a>
             </div>
           </div>
 
-          <span className="hidden lg:block w-px bg-brand self-stretch mt-9" />
+          <span className="hidden xl:block w-px bg-brand self-stretch mt-9" />
 
           <div>
             <h4 className="text-xl font-medium text-brand">Enlaces</h4>
-            <ul className="mt-6 lg:mt-8 space-y-4 lg:space-y-6 text-sm font-medium xl:whitespace-nowrap">
+            <ul className="mt-5 xl:mt-7 space-y-2 xl:space-y-4 text-sm font-medium xl:whitespace-nowrap">
               {links.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="hover:text-brand transition-colors">{link.label}</a>
+                  <a href={link.href} className="inline-block py-1.5 hover:text-brand transition-colors">{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -98,20 +98,20 @@ export const Footer: React.FC = () => {
 
           <div>
             <h4 className="text-xl font-medium text-brand">Servicios</h4>
-            <ul className="mt-6 lg:mt-8 space-y-4 lg:space-y-6 text-sm font-medium xl:whitespace-nowrap">
+            <ul className="mt-5 xl:mt-7 space-y-2 xl:space-y-4 text-sm font-medium xl:whitespace-nowrap">
               {services.map(({ title }) => (
                 <li key={title}>
-                  <a href="#services" className="hover:text-brand transition-colors">{title}</a>
+                  <a href="#services" className="inline-block py-1.5 hover:text-brand transition-colors">{title}</a>
                 </li>
               ))}
             </ul>
           </div>
 
-          <span className="hidden lg:block w-px bg-brand self-stretch mt-9" />
+          <span className="hidden xl:block w-px bg-brand self-stretch mt-9" />
 
-          <div className="col-span-2 md:col-span-1 lg:text-center">
+          <div className="col-span-2 md:col-span-1 xl:text-center">
             <h4 className="text-xl font-medium text-brand">Contacto</h4>
-            <div className="mt-6 lg:mt-8 space-y-3 text-[15px] leading-[23px]">
+            <div className="mt-6 xl:mt-8 space-y-3 text-[15px] leading-[23px]">
               <p className="font-medium">info@tucsoft.com</p>
               <p className="font-normal">
                 San Miguel de Tucumán,

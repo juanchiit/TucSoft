@@ -4,7 +4,7 @@ import { Button } from '../ui/Button';
 import { NOA_VIEWBOX, noaCities, noaProvinces } from './noaMap';
 
 interface TestimonialsSectionProps {
-  onConnect?: () => void;
+  onOpenDemo?: () => void;
 }
 
 const sectors = [
@@ -18,7 +18,7 @@ const sectors = [
     icon: Factory,
     title: 'Industria regional',
     description:
-      'Sectores como el azucarero o la gestión de residuos, donde aplicamos telemetría, automatización y diagnóstico preventivo.',
+      'Sectores como el azucarero o la gestión de residuos, donde identificamos oportunidades para aplicar telemetría, automatización y diagnóstico preventivo.',
   },
   {
     icon: Building2,
@@ -44,7 +44,7 @@ const provinceLabels: Record<string, { x: number; y: number }> = {
   'La Rioja': { x: 22, y: 78 },
 };
 
-export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onConnect }) => {
+export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onOpenDemo }) => {
   return (
     <section id="clients" className="bg-ink px-4 sm:px-10 lg:px-20 pt-20 pb-24">
       <div className="max-w-[1200px] mx-auto">
@@ -68,7 +68,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onConn
           </div>
         </div>
 
-        <div className="mt-14 lg:mt-16 grid grid-cols-1 lg:grid-cols-[minmax(0,440px)_1fr] gap-12 lg:gap-16 items-center">
+        <div className="mt-14 lg:mt-16 grid grid-cols-1 xl:grid-cols-[minmax(0,440px)_1fr] gap-12 xl:gap-16 items-center">
           <div className="relative w-full max-w-[440px] mx-auto">
             <svg viewBox={NOA_VIEWBOX} className="w-full h-auto" role="img" aria-label="Mapa del Noroeste Argentino">
               {noaProvinces.map((province) => {
@@ -135,13 +135,13 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onConn
               ¿Listo para <span className="text-brand">Innovar?</span>
             </h2>
             <p className="mt-4 text-base leading-6 text-white/80">
-              Contactanos para agendar una reunión técnica sobre tu proyecto y descubrir cómo podemos
-              satisfacer tus necesidades tecnológicas.
+              Agendá una demo personalizada de ColdTrack y descubrí cómo TucSoft puede transformar la
+              operación de tu empresa con software, IoT e inteligencia artificial.
             </p>
           </div>
 
-          <Button variant="primary" size="lg" onClick={onConnect} className="group whitespace-nowrap w-full md:w-auto">
-            <span>Hablemos</span>
+          <Button variant="primary" size="lg" onClick={onOpenDemo} className="group whitespace-nowrap w-full md:w-auto">
+            <span>Solicitar Demo</span>
             <ArrowRight size={22} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
