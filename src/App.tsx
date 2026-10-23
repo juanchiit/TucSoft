@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { Navbar } from './components/layout/Navbar';
 import { HeroSection } from './components/sections/HeroSection';
 import { ServicesSection } from './components/sections/ServicesSection';
@@ -8,29 +8,30 @@ import { WhyUsSection } from './components/sections/WhyUsSection';
 import { TestimonialsSection } from './components/sections/TestimonialsSection';
 import { Footer } from './components/layout/Footer';
 import { EstimateModal } from './components/ui/EstimateModal';
+import { services } from './data/services';
 
 export const App: React.FC = () => {
-  const [estimateModalOpen, setEstimateModalOpen] = useState(false);
+  const [estimateService, setEstimateService] = useState<string | null>(null);
+
+  const openEstimate = useCallback((service = services[0].title) => setEstimateService(service), []);
+  const closeEstimate = useCallback(() => setEstimateService(null), []);
 
   return (
     <div className="min-h-screen bg-ink text-white font-poppins overflow-x-hidden">
-      <Navbar onOpenEstimate={() => setEstimateModalOpen(true)} />
-      
+      <Navbar onOpenEstimate={() => openEstimate()} />
+
       <main>
-        <HeroSection />
-        <ServicesSection />
+        <HeroSection onOpenEstimate={() => openEstimate()} />
+        <ServicesSection onSelectService={openEstimate} />
         <MissionVisionSection />
-        <ColdTrackShowcase />
         <WhyUsSection />
-        <TestimonialsSection onConnect={() => setEstimateModalOpen(true)} />
+        <ColdTrackShowcase />
+        <TestimonialsSection onConnect={() => openEstimate()} />
       </main>
 
       <Footer />
 
-      <EstimateModal
-        isOpen={estimateModalOpen}
-        onClose={() => setEstimateModalOpen(false)}
-      />
+      {estimateService && <EstimateModal initialService={estimateService} onClose={closeEstimate} />}
     </div>
   );
 };

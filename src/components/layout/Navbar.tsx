@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
 import logo from '../../assets/logo-tucsoft.png';
+import { ThemeToggle } from '../ui/ThemeToggle';
 
 interface NavbarProps {
   onOpenEstimate?: () => void;
@@ -17,7 +18,7 @@ const menuLinks = [
 const EstimateLink: React.FC<{ onClick?: () => void }> = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="relative pb-2 text-base sm:text-xl font-poppins font-normal text-white hover:text-brand transition-colors"
+    className="relative pb-2 whitespace-nowrap text-base lg:text-xl font-poppins font-normal text-white hover:text-brand transition-colors"
   >
     <span className="hidden sm:inline">Solicitar </span>Presupuesto
     <span className="absolute bottom-0 right-0 h-[2px] w-full sm:w-[62%] bg-current" />
@@ -49,18 +50,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimate }) => {
           scrolled ? 'bg-ink/95 backdrop-blur py-4' : 'bg-transparent py-7'
         }`}
       >
-        <div className="max-w-[1200px] mx-auto grid grid-cols-3 items-center">
-          <button
-            onClick={() => setMenuOpen(true)}
-            aria-label="Abrir menú"
-            className="group flex flex-col gap-[9px] w-[50px] py-2"
-          >
-            <span className="block h-[3px] w-[50px] bg-white group-hover:bg-brand transition-colors" />
-            <span className="block h-[3px] w-[30px] bg-white group-hover:bg-brand transition-all group-hover:w-[50px]" />
-          </button>
+        <div className="max-w-[1200px] mx-auto grid grid-cols-[1fr_auto_1fr] gap-4 items-center">
+          <div className="flex items-center gap-3 sm:gap-6">
+            <button
+              onClick={() => setMenuOpen(true)}
+              aria-label="Abrir menú"
+              className="group flex flex-col gap-[9px] w-10 sm:w-[50px] py-2"
+            >
+              <span className="block h-[3px] w-full bg-white group-hover:bg-brand transition-colors" />
+              <span className="block h-[3px] w-3/5 bg-white group-hover:bg-brand transition-all group-hover:w-full" />
+            </button>
+            <ThemeToggle />
+          </div>
 
           <a href="#" className="justify-self-center hover:opacity-90 transition-opacity">
-            <img src={logo} alt="TucSoft" className="h-8 sm:h-10 w-auto" />
+            <img src={logo} alt="TucSoft" className="h-7 sm:h-10 w-auto" />
           </a>
 
           <div className="justify-self-end">
@@ -70,8 +74,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimate }) => {
       </header>
 
       {menuOpen && (
-        <div className="fixed inset-0 z-50 hero-glow flex flex-col px-4 sm:px-10 lg:px-20 py-7">
-          <div className="max-w-[1200px] w-full mx-auto grid grid-cols-3 items-center">
+        <div className="fixed inset-0 z-50 hero-glow flex flex-col overflow-y-auto px-4 sm:px-10 lg:px-20 py-7">
+          <div className="max-w-[1200px] w-full mx-auto grid grid-cols-[1fr_auto_1fr] gap-4 items-center">
             <button
               onClick={() => setMenuOpen(false)}
               aria-label="Cerrar menú"
@@ -90,13 +94,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimate }) => {
             </div>
           </div>
 
-          <nav className="flex-1 flex flex-col items-center justify-center gap-8 sm:gap-12">
+          <nav className="flex-1 flex flex-col items-center justify-center gap-6 sm:gap-12 py-8">
             {menuLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="min-w-[270px] px-4 text-center pb-2 border-b border-white text-4xl sm:text-5xl font-poppins font-medium uppercase text-white hover:text-brand hover:border-brand transition-colors"
+                className="w-full max-w-[420px] px-4 text-center pb-2 border-b border-white text-[28px] sm:text-5xl font-poppins font-medium uppercase text-white hover:text-brand hover:border-brand transition-colors"
               >
                 {link.label}
               </a>

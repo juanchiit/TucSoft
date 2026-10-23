@@ -19,7 +19,7 @@ export const Button: React.FC<ButtonProps> = ({
   const baseStyles = 'inline-flex items-center justify-center font-poppins font-normal rounded-[4px] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand disabled:opacity-50 disabled:cursor-not-allowed';
   
   const variantStyles = {
-    primary: 'bg-brand text-white font-medium hover:bg-brand-hover',
+    primary: 'bg-brand text-snow font-medium hover:bg-brand-hover',
     outline: 'border-2 border-white bg-transparent text-white hover:bg-white hover:text-ink',
     ghost: 'text-white hover:text-brand',
   };

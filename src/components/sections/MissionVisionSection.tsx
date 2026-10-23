@@ -10,7 +10,7 @@ export const MissionVisionSection: React.FC = () => {
             Misión & <span className="text-brand">Visión</span>
           </h2>
           <p className="text-base text-white">
-            Transformamos equipos de frío convencionales en activos inteligentes.
+            Convertimos datos y procesos manuales en activos inteligentes para nuestros clientes.
           </p>
         </div>
 
@@ -30,13 +30,13 @@ export const MissionVisionSection: React.FC = () => {
               </h3>
 
               <p className="text-white text-base leading-6 mb-6">
-                Proveer soluciones de vanguardia en monitoreo y diagnóstico preventivo para la industria de la refrigeración, transformando equipos de frío convencionales en activos inteligentes para garantizar la integridad de la cadena de suministro de nuestros clientes.
+                Proveer soluciones de vanguardia en software, IoT e inteligencia artificial que transformen los equipos y procesos de nuestros clientes en activos inteligentes, comenzando por el monitoreo y diagnóstico preventivo de la cadena de frío con ColdTrack.
               </p>
             </div>
 
             <div className="pt-5 border-t border-muted flex items-center justify-between text-sm text-white/70">
-              <span>Diagnóstico preventivo</span>
-              <span className="text-brand">Cadena de suministro</span>
+              <span>Software, IoT e IA</span>
+              <span className="text-brand">Activos inteligentes</span>
             </div>
           </article>
 
@@ -55,7 +55,7 @@ export const MissionVisionSection: React.FC = () => {
               </h3>
 
               <p className="text-white text-base leading-6 mb-6">
-                Ser el estándar tecnológico global en gestión de equipos de frío para 2030, liderando el mercado de IoT (Internet de las Cosas) aplicado a la refrigeración comercial e industrial en el NOA y el resto del mundo.
+                Ser para 2030 la empresa de referencia en software e inteligencia artificial del NOA, llevando al resto del mundo soluciones nacidas en Tucumán y convirtiendo a ColdTrack en el estándar tecnológico en gestión de equipos de frío.
               </p>
             </div>
 
