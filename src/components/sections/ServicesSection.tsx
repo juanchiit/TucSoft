@@ -51,7 +51,7 @@ export const ServicesSection: React.FC = () => {
             Nuestros <span className="text-brand">Servicios</span>
           </h2>
           <p className="mt-4 text-base text-white">
-            Software, IoT e inteligencia artificial para empresas de la región
+            Lo que hacemos en cada proyecto, propio o de nuestros clientes
           </p>
         </div>
 

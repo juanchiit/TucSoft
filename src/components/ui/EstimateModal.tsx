@@ -12,7 +12,7 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({ isOpen, onClose })
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    service: 'Solución ColdTrack IoT',
+    service: 'Desarrollo a Medida',
     budget: '$5,000 - $15,000',
     message: '',
   });
@@ -87,8 +87,8 @@ export const EstimateModal: React.FC<EstimateModalProps> = ({ isOpen, onClose })
                   onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                   className="w-full bg-ink-deep border border-ink-card rounded px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand"
                 >
-                  <option value="Solución ColdTrack IoT">Solución ColdTrack IoT</option>
                   <option value="Desarrollo a Medida">Desarrollo a Medida (web y móvil)</option>
+                  <option value="Solución ColdTrack IoT">Solución ColdTrack IoT</option>
                   <option value="IoT y Telemetría">IoT y Telemetría</option>
                   <option value="Datos e IA">Datos e IA</option>
                   <option value="Automatización de Procesos">Automatización de Procesos</option>

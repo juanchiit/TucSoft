@@ -20,8 +20,8 @@ export const App: React.FC = () => {
         <HeroSection />
         <ServicesSection />
         <MissionVisionSection />
-        <ColdTrackShowcase />
         <WhyUsSection />
+        <ColdTrackShowcase />
         <TestimonialsSection onConnect={() => setEstimateModalOpen(true)} />
       </main>
 

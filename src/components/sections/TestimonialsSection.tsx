@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Factory, GlassWater, Store, Wrench } from 'lucide-react';
+import { ArrowRight, Building2, Factory, Snowflake, Wrench } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { NOA_VIEWBOX, noaCities, noaProvinces } from './noaMap';
 
@@ -9,28 +9,28 @@ interface TestimonialsSectionProps {
 
 const sectors = [
   {
-    icon: GlassWater,
-    title: 'Embotelladoras de bebidas',
+    icon: Snowflake,
+    title: 'Cadena de frío y consumo masivo',
     description:
-      'Plantas que proveen exhibidoras a su red de comercios y necesitan mantenerlas funcionando sin cortar la venta.',
+      'Embotelladoras, frigoríficos y comercializadoras de equipos que gestionan sus heladeras y freezers con ColdTrack.',
   },
   {
     icon: Factory,
-    title: 'Industria frigorífica',
+    title: 'Industria regional',
     description:
-      'Empresas para las que la refrigeración es parte central del proceso productivo y de la cadena de suministro.',
+      'Sectores como el azucarero o la gestión de residuos, donde aplicamos telemetría, automatización y diagnóstico preventivo.',
   },
   {
-    icon: Store,
-    title: 'Comercializadoras de equipos',
+    icon: Building2,
+    title: 'Empresas y organizaciones',
     description:
-      'Compañías que venden heladeras y freezers y buscan ofrecer un servicio postventa ágil y trazable.',
+      'Compañías que nos confían el desarrollo de sus sistemas web y móviles a medida y su infraestructura en la nube.',
   },
   {
     icon: Wrench,
-    title: 'Talleres de refrigeración',
+    title: 'Socios técnicos',
     description:
-      'Servicios técnicos de la región que se suman a nuestra plataforma de partnering para recibir órdenes de trabajo.',
+      'Talleres y proveedores de servicio técnico de la región que trabajan junto a nosotros a través de nuestras plataformas.',
   },
 ];
 
@@ -70,7 +70,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onConn
             Nuestros <span className="text-brand">Clientes</span>
           </h2>
           <p className="mt-6 text-base text-white">
-            Empresas del Noroeste Argentino que dependen de sus equipos de frío
+            Empresas del Noroeste Argentino que transforman su operación junto a TucSoft
           </p>
 
           <div className="mt-5 inline-flex flex-wrap justify-center gap-4 text-sm">
