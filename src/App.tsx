@@ -7,31 +7,30 @@ import { ColdTrackShowcase } from './components/sections/ColdTrackShowcase';
 import { WhyUsSection } from './components/sections/WhyUsSection';
 import { TestimonialsSection } from './components/sections/TestimonialsSection';
 import { Footer } from './components/layout/Footer';
-import { EstimateModal } from './components/ui/EstimateModal';
-import { services } from './data/services';
+import { DemoModal } from './components/ui/DemoModal';
 
 export const App: React.FC = () => {
-  const [estimateService, setEstimateService] = useState<string | null>(null);
+  const [demoOpen, setDemoOpen] = useState(false);
 
-  const openEstimate = useCallback((service = services[0].title) => setEstimateService(service), []);
-  const closeEstimate = useCallback(() => setEstimateService(null), []);
+  const openDemo = useCallback(() => setDemoOpen(true), []);
+  const closeDemo = useCallback(() => setDemoOpen(false), []);
 
   return (
     <div className="min-h-screen bg-ink text-white font-poppins overflow-x-hidden">
-      <Navbar onOpenEstimate={() => openEstimate()} />
+      <Navbar onOpenDemo={openDemo} />
 
       <main>
-        <HeroSection onOpenEstimate={() => openEstimate()} />
-        <ServicesSection onSelectService={openEstimate} />
+        <HeroSection onOpenDemo={openDemo} />
+        <ServicesSection />
         <MissionVisionSection />
         <WhyUsSection />
         <ColdTrackShowcase />
-        <TestimonialsSection onConnect={() => openEstimate()} />
+        <TestimonialsSection onOpenDemo={openDemo} />
       </main>
 
       <Footer />
 
-      {estimateService && <EstimateModal initialService={estimateService} onClose={closeEstimate} />}
+      {demoOpen && <DemoModal onClose={closeDemo} />}
     </div>
   );
 };

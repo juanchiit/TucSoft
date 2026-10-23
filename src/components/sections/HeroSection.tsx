@@ -4,10 +4,10 @@ import { Button } from '../ui/Button';
 import { HeroOrb } from '../ui/HeroOrb';
 
 interface HeroSectionProps {
-  onOpenEstimate: () => void;
+  onOpenDemo: () => void;
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenEstimate }) => {
+export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDemo }) => {
   return (
     <section className="relative overflow-hidden">
       <div className="hero-glow min-h-[560px] lg:min-h-[635px] flex items-center pt-32 pb-20 px-4 sm:px-10 lg:px-20">
@@ -28,7 +28,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenEstimate }) => {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Button variant="primary" size="lg" className="group" onClick={onOpenEstimate}>
+              <Button variant="primary" size="lg" className="group" onClick={onOpenDemo}>
                 <span>Comencemos a Innovar</span>
                 <ArrowRight size={22} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
               </Button>

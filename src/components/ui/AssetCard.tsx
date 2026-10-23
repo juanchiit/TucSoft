@@ -56,7 +56,7 @@ export const AssetCard: React.FC<AssetCardProps> = ({ asset, showDiagnosis, onDi
 
         <div className="mt-4 grid grid-cols-2 gap-4 rounded-lg border border-white/10 bg-[#0b1120] p-3">
           <div>
-            <span className="text-[10px] uppercase tracking-wider text-slate-400">Temp. interna</span>
+            <span className="text-[11px] uppercase tracking-wider text-slate-400">Temp. interna</span>
             <div
               className={`mt-1 flex items-center gap-1 text-xl font-semibold tabular-nums ${
                 hasFault ? 'text-red-400' : 'text-white'
@@ -67,7 +67,7 @@ export const AssetCard: React.FC<AssetCardProps> = ({ asset, showDiagnosis, onDi
             </div>
           </div>
           <div>
-            <div className="flex items-center justify-between text-[10px] uppercase tracking-wider text-slate-400">
+            <div className="flex items-center justify-between text-[11px] uppercase tracking-wider text-slate-400">
               <span>Salud IoT</span>
               <span className="text-xs font-semibold text-white tabular-nums">{asset.health}%</span>
             </div>
@@ -90,13 +90,13 @@ export const AssetCard: React.FC<AssetCardProps> = ({ asset, showDiagnosis, onDi
       </div>
 
       <div className="flex gap-2 px-4 pb-4">
-        <span className="flex-1 rounded-md border border-white/10 bg-[#0b1120] py-2 text-center text-xs font-medium text-white">
+        <span className="flex-1 rounded-md border border-white/10 bg-[#0b1120] py-2.5 text-center text-xs font-medium text-white">
           Telemetría
         </span>
         {hasFault && (
           <button
             onClick={onDiagnose}
-            className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-md bg-gradient-to-r from-blue-600 to-indigo-600 py-2 text-xs font-medium text-white hover:brightness-110 transition"
+            className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-md bg-gradient-to-r from-blue-600 to-indigo-600 py-2.5 text-xs font-medium text-white hover:brightness-110 transition"
           >
             <Bot size={14} />
             Diagnóstico IA
