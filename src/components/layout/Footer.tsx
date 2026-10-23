@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../../assets/logo-tucsoft.png';
+import { services } from '../../data/services';
 
 const FacebookIcon = () => (
   <svg viewBox="0 0 24 24" className="w-6 h-6" fill="currentColor" aria-hidden>
@@ -31,7 +32,6 @@ const links = [
   { label: 'Clientes', href: '#clients' },
 ];
 
-const services = ['Desarrollo a Medida', 'IoT y Telemetría', 'Datos e IA', 'Automatización', 'Cloud y DevOps'];
 
 export const Footer: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -49,8 +49,8 @@ export const Footer: React.FC = () => {
   return (
     <footer className="font-montserrat text-white">
       <div className="bg-ink-deep px-4 sm:px-10 lg:px-[117px] py-12">
-        <div className="max-w-[1126px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[360px_1px_auto_auto_1px_1fr] gap-10 lg:gap-x-14">
-          <div>
+        <div className="max-w-[1126px] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-[360px_1px_auto_auto_1px_1fr] gap-x-6 gap-y-10 lg:gap-x-10 xl:gap-x-14">
+          <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <a href="#" className="inline-block">
               <img src={logo} alt="TucSoft" className="h-10 w-auto" />
             </a>
@@ -87,7 +87,7 @@ export const Footer: React.FC = () => {
 
           <div>
             <h4 className="text-xl font-medium text-brand">Enlaces</h4>
-            <ul className="mt-8 space-y-6 text-sm font-medium">
+            <ul className="mt-6 lg:mt-8 space-y-4 lg:space-y-6 text-sm font-medium xl:whitespace-nowrap">
               {links.map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="hover:text-brand transition-colors">{link.label}</a>
@@ -98,10 +98,10 @@ export const Footer: React.FC = () => {
 
           <div>
             <h4 className="text-xl font-medium text-brand">Servicios</h4>
-            <ul className="mt-8 space-y-6 text-sm font-medium">
-              {services.map((service) => (
-                <li key={service}>
-                  <a href="#services" className="hover:text-brand transition-colors">{service}</a>
+            <ul className="mt-6 lg:mt-8 space-y-4 lg:space-y-6 text-sm font-medium xl:whitespace-nowrap">
+              {services.map(({ title }) => (
+                <li key={title}>
+                  <a href="#services" className="hover:text-brand transition-colors">{title}</a>
                 </li>
               ))}
             </ul>
@@ -109,9 +109,9 @@ export const Footer: React.FC = () => {
 
           <span className="hidden lg:block w-px bg-brand self-stretch mt-9" />
 
-          <div className="lg:text-center">
+          <div className="col-span-2 md:col-span-1 lg:text-center">
             <h4 className="text-xl font-medium text-brand">Contacto</h4>
-            <div className="mt-8 space-y-3 text-[15px] leading-[23px]">
+            <div className="mt-6 lg:mt-8 space-y-3 text-[15px] leading-[23px]">
               <p className="font-medium">info@tucsoft.com</p>
               <p className="font-normal">
                 San Miguel de Tucumán,

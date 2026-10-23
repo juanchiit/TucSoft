@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-padding-top: 96px;
+  }
+
   body {
     background-color: #181818;
   }

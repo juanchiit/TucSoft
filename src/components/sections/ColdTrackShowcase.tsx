@@ -103,7 +103,7 @@ export const ColdTrackShowcase: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-2">
             {features.map(({ icon: Icon, title, description }) => (
-              <div key={title} className="p-8 transition-colors hover:bg-ink-card">
+              <div key={title} className="p-6 sm:p-8 rounded-lg transition-colors hover:bg-ink-card">
                 <Icon size={32} strokeWidth={1.75} className="text-brand mb-5" />
                 <h4 className="text-xl font-semibold text-white mb-3">{title}</h4>
                 <p className="text-base leading-6 text-white">{description}</p>
@@ -123,7 +123,7 @@ export const ColdTrackShowcase: React.FC = () => {
           </div>
         </div>
 
-        <div id="como-funciona" className="pt-24 scroll-mt-24">
+        <div id="como-funciona" className="pt-20 lg:pt-24">
           <div className="text-center mb-12 lg:mb-14">
             <span className="text-brand text-sm font-medium uppercase tracking-widest">
               El ecosistema ColdTrack
@@ -140,9 +140,9 @@ export const ColdTrackShowcase: React.FC = () => {
             {steps.map(({ icon: Icon, title, description }, idx) => (
               <li
                 key={title}
-                className="bg-ink-deep rounded-lg p-8 flex gap-6 sm:gap-8 transition-colors hover:bg-ink-card"
+                className="bg-ink-deep rounded-lg p-6 sm:p-8 flex flex-col sm:flex-row gap-4 sm:gap-8 transition-colors hover:bg-ink-card"
               >
-                <span className="text-6xl sm:text-[80px] font-bold leading-none text-brand/40 shrink-0">
+                <span className="text-5xl sm:text-[80px] font-bold leading-none text-brand/40 shrink-0">
                   {String(idx + 1).padStart(2, '0')}
                 </span>
                 <div>

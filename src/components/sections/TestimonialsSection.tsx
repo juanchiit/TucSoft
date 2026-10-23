@@ -48,23 +48,6 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onConn
   return (
     <section id="clients" className="bg-ink px-4 sm:px-10 lg:px-20 pt-20 pb-24">
       <div className="max-w-[1200px] mx-auto">
-        <div className="bg-ink-deep rounded-lg px-6 sm:px-8 py-10 flex flex-col md:flex-row md:items-center justify-between gap-8 mb-20 lg:mb-24">
-          <div className="max-w-[800px]">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
-              ¿Listo para <span className="text-brand">Innovar?</span>
-            </h2>
-            <p className="mt-4 text-base leading-6 text-white">
-              Contáctanos para agendar una reunión técnica sobre tu proyecto y descubrir cómo podemos
-              satisfacer tus necesidades tecnológicas.
-            </p>
-          </div>
-
-          <Button variant="outline" size="lg" onClick={onConnect} className="group whitespace-nowrap self-start md:self-center">
-            <span>Hablemos</span>
-            <ArrowRight size={22} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
-          </Button>
-        </div>
-
         <div className="text-center">
           <h2 className="section-title">
             Nuestros <span className="text-brand">Clientes</span>
@@ -144,6 +127,23 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ onConn
               </article>
             ))}
           </div>
+        </div>
+
+        <div className="mt-20 lg:mt-24 bg-ink-deep border border-white/10 rounded-lg px-6 sm:px-10 py-10 flex flex-col md:flex-row md:items-center justify-between gap-8">
+          <div className="max-w-[720px]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+              ¿Listo para <span className="text-brand">Innovar?</span>
+            </h2>
+            <p className="mt-4 text-base leading-6 text-white/80">
+              Contactanos para agendar una reunión técnica sobre tu proyecto y descubrir cómo podemos
+              satisfacer tus necesidades tecnológicas.
+            </p>
+          </div>
+
+          <Button variant="primary" size="lg" onClick={onConnect} className="group whitespace-nowrap w-full md:w-auto">
+            <span>Hablemos</span>
+            <ArrowRight size={22} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
+          </Button>
         </div>
       </div>
     </section>

@@ -3,7 +3,11 @@ import { ArrowRight } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { HeroOrb } from '../ui/HeroOrb';
 
-export const HeroSection: React.FC = () => {
+interface HeroSectionProps {
+  onOpenEstimate: () => void;
+}
+
+export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenEstimate }) => {
   return (
     <section className="relative overflow-hidden">
       <div className="hero-glow min-h-[560px] lg:min-h-[635px] flex items-center pt-32 pb-20 px-4 sm:px-10 lg:px-20">
@@ -23,21 +27,24 @@ export const HeroSection: React.FC = () => {
               software, IoT y datos.
             </p>
 
-            <Button
-              variant="outline"
-              size="lg"
-              className="mt-6 group"
-              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              <span>Comencemos a Innovar</span>
-              <ArrowRight size={22} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <Button variant="primary" size="lg" className="group" onClick={onOpenEstimate}>
+                <span>Comencemos a Innovar</span>
+                <ArrowRight size={22} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => document.getElementById('coldtrack')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Conocé ColdTrack
+              </Button>
+            </div>
           </div>
 
           <HeroOrb className="hidden lg:block w-full max-w-[420px] justify-self-end" />
         </div>
       </div>
-
     </section>
   );
 };
